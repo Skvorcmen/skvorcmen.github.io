@@ -4,7 +4,7 @@
 
 ## 🌐 Доступ
 
-[https://skvorcmen.github.io/borzo/](https://skvorcmen.github.io/borzo/)
+[https://skvorcmen.github.io/borzo/](https://skvorcmen.github.io/)
 
 ## 🔐 Доступ к системе
 
