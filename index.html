@@ -1,6 +1,6 @@
 <html lang="ru"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BORZO</title>
 <style>
 :root{
@@ -10,123 +10,12 @@
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text)}
-header{height:60px;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:rgba(20,20,20,.18);border-bottom:1px solid rgba(201,162,74,.35);position:sticky;top:0;z-index:100}
-.brand{display:flex;align-items:center;gap:10px}
-.logo{border:2px solid var(--gold);color:var(--gold);padding:4px 10px;border-radius:8px;font-weight:800;letter-spacing:2px;font-size:22px;background:#2f2f2f}
-.header-title{font-size:16px;font-weight:700;color:#fff}.header-sub{font-size:10px;color:#ddd;margin-top:2px}
-.menu-buttons{display:flex;gap:8px;align-items:center}
-
-/* Стили для кнопок - единый стиль */
-.menu-icon {
-    background: rgba(201,162,74,.2);
-    border: 1px solid var(--gold);
-    border-radius: 40px;
-    padding: 8px 14px;
-    cursor: pointer;
-    color: var(--gold);
-    font-size: 16px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    transition: all 0.2s ease;
-    font-weight: 500;
-}
-.menu-icon:hover {
-    background: rgba(201,162,74,.35);
-    transform: scale(1.02);
-}
-.menu-icon span {
-    font-size: 18px;
-}
-.user-menu-btn {
-    background: rgba(201,162,74,.2);
-    border: 1px solid var(--gold);
-    border-radius: 40px;
-    padding: 8px 14px;
-    cursor: pointer;
-    color: var(--gold);
-    font-size: 16px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    transition: all 0.2s ease;
-}
-.user-menu-btn:hover {
-    background: rgba(201,162,74,.35);
-}
-
-/* Контейнер для мобильных кнопок - горизонтальное расположение */
-.mobile-buttons-container {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    align-items: center;
-}
-.role-select{display:none}
-
-/* Выпадающее меню пользователя */
-.user-dropdown {
-    position: relative;
-}
-.user-dropdown-menu {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background: var(--panel);
-    border-radius: 16px;
-    border: 1px solid var(--line);
-    box-shadow: 0 10px 30px rgba(0,0,0,.2);
-    min-width: 180px;
-    z-index: 1000;
-    display: none;
-    overflow: hidden;
-    animation: fadeIn 0.2s ease;
-}
-.user-dropdown-menu.show {
-    display: block;
-}
-.user-dropdown-item {
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    cursor: pointer;
-    transition: background 0.2s;
-    font-size: 14px;
-    color: var(--text);
-}
-.user-dropdown-item:hover {
-    background: var(--goldsoft);
-}
-.user-dropdown-item.active {
-    background: var(--goldsoft);
-    color: var(--gold2);
-    font-weight: 600;
-}
-.user-dropdown-item.active::after {
-    content: "✓";
-    margin-left: auto;
-    color: var(--gold);
-}
-.user-dropdown-divider {
-    height: 1px;
-    background: var(--line);
-    margin: 4px 0;
-}
-.user-dropdown-item.logout {
-    color: var(--danger);
-}
-.user-dropdown-item.logout:hover {
-    background: rgba(198,76,76,.1);
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.layout{display:grid;grid-template-columns:300px 1fr 340px;gap:16px;padding:16px;min-height:calc(100vh - 60px);transition:all 0.3s ease}
+header{height:82px;display:flex;align-items:center;justify-content:space-between;padding:16px 22px;background:rgba(20,20,20,.18);border-bottom:1px solid rgba(201,162,74,.35)}
+.brand{display:flex;align-items:center;gap:14px}
+.logo{border:2px solid var(--gold);color:var(--gold);padding:6px 14px;border-radius:8px;font-weight:800;letter-spacing:2px;font-size:28px;background:#2f2f2f}
+.header-title{font-size:20px;font-weight:700;color:#fff}.header-sub{font-size:12px;color:#ddd;margin-top:4px}
+.role-select{border:1px solid rgba(201,162,74,.45);background:#2f2f2f;color:#fff;border-radius:10px;padding:10px 12px}
+.layout{display:grid;grid-template-columns:300px 1fr 340px;gap:16px;padding:16px;min-height:calc(100vh - 82px)}
 .panel{background:var(--panel);border:1px solid rgba(255,255,255,.16);border-radius:18px;padding:16px;box-shadow:0 10px 28px rgba(0,0,0,.15)}
 .white{background:var(--white)}
 .section-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:12px}
@@ -157,18 +46,18 @@ header{height:60px;display:flex;align-items:center;justify-content:space-between
 .textarea{min-height:120px;resize:vertical}
 .icon-btn,.small-btn,.copy-btn{border:1px solid var(--line);background:#fff;border-radius:10px;cursor:pointer;font:inherit}
 .icon-btn{width:34px;height:34px;display:flex;align-items:center;justify-content:center;font-size:16px}
-.small-btn{padding:8px 12px;font-size:12px}
-.copy-btn{min-height:44px;min-width:120px;padding:10px 16px;font-size:14px;font-weight:800;background:var(--gold);border-color:var(--gold2);color:#fff;box-shadow:0 4px 12px rgba(201,162,74,.18)}
+.small-btn{padding:10px 12px;font-size:13px}
+.copy-btn{min-height:48px;min-width:148px;padding:12px 20px;font-size:16px;font-weight:800;background:var(--gold);border-color:var(--gold2);color:#fff;box-shadow:0 4px 12px rgba(201,162,74,.18)}
 .gold-btn{background:var(--gold);border-color:var(--gold2);color:#fff}
 .danger-btn{color:var(--danger)}
-.return-btn{background:var(--danger);border-color:#b54444;color:#fff;font-size:18px;font-weight:800;padding:12px 16px;min-width:280px}
-.center-title{font-size:28px;font-weight:800;margin-bottom:4px;word-break:break-word}
-.center-sub{font-size:16px;font-weight:800;margin-bottom:12px}
+.return-btn{background:var(--danger);border-color:#b54444;color:#fff;font-size:20px;font-weight:800;padding:16px 20px;min-width:320px}
+.center-title{font-size:34px;font-weight:800;margin-bottom:4px}
+.center-sub{font-size:18px;font-weight:800;margin-bottom:14px}
 .center-sub.main{color:var(--green)}
 .center-sub.side{color:var(--muted)}
 .info-box{border-radius:14px;padding:12px 14px;margin-bottom:12px;line-height:1.45}.gold-box{background:var(--goldsoft);border:1px solid #ead39f}.blue-box{background:var(--bluesoft);border:1px solid #c7d8ff}
 .card{border:2px solid #2f3237;background:#ffffff;border-radius:14px;padding:14px;margin-bottom:14px;box-shadow:0 3px 10px rgba(0,0,0,.06)}
-.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;flex-wrap:wrap}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
 .card-main{display:block}
 .drag-handle{
 width:24px;height:24px;
@@ -186,21 +75,21 @@ flex:0 0 auto;
 .card-body{flex:1;min-width:0}
 .card-text{user-select:text;-webkit-user-select:text;cursor:text}
 .material-row{display:flex;align-items:center;gap:8px;margin-top:8px}
-.card-label{font-size:11px;font-weight:900;color:var(--gold2);text-transform:uppercase;letter-spacing:.6px}
-.card-text{white-space:pre-wrap;line-height:1.62;font-size:16px;color:#2a2a2a}
+.card-label{font-size:12px;font-weight:900;color:var(--gold2);text-transform:uppercase;letter-spacing:.6px}
+.card-text{white-space:pre-wrap;line-height:1.62;font-size:18px;color:#2a2a2a}
 .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
 .divider{height:1px;background:#e7e3da;margin:14px 0}.empty{padding:14px;border:1px dashed #cfcac0;border-radius:12px;background:#fff;color:var(--muted)}
 .badge{display:inline-flex;align-items:center;justify-content:center;min-width:22px;height:22px;padding:0 7px;border-radius:999px;background:var(--danger);color:#fff;font-size:12px;font-weight:700}
 .proposal-card{border:1px solid var(--line);border-radius:14px;padding:12px;background:#fff}
 .proposal-title{font-weight:700;margin-bottom:6px}
 .attachments-row{display:flex;gap:10px;overflow-x:auto;padding:6px 0 2px 0;margin-top:8px}
-.asset-chip{min-width:100px;max-width:120px;border:1px solid #d7d2c7;border-radius:10px;padding:6px;background:#fafafa;display:flex;flex-direction:column;gap:4px}
-.asset-chip-title{font-size:11px;font-weight:700;color:#444;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.asset-chip-preview{height:50px;border:1px solid #ece7dc;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:4px}
+.asset-chip{min-width:120px;max-width:140px;border:1px solid #d7d2c7;border-radius:10px;padding:6px;background:#fafafa;display:flex;flex-direction:column;gap:4px}
+.asset-chip-title{font-size:12px;font-weight:700;color:#444;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.asset-chip-preview{height:60px;border:1px solid #ece7dc;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:4px}
 .asset-chip-preview img{max-width:100%;max-height:100%;display:block;border-radius:8px}
-.asset-chip-link{font-size:10px;line-height:1.3;color:#555;word-break:break-all;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.asset-chip-link{font-size:11px;line-height:1.3;color:#555;word-break:break-all;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .asset-editor{margin-top:10px;border-top:1px solid #e7e3da;padding-top:10px}
-.asset-editor-grid{display:grid;grid-template-columns:1fr 100px;gap:8px}
+.asset-editor-grid{display:grid;grid-template-columns:1fr 120px 1fr;gap:8px}
 .asset-file{font:inherit}
 
 .app-modal-backdrop{
@@ -209,16 +98,16 @@ flex:0 0 auto;
 }
 .app-modal-backdrop.show{display:flex}
 .app-modal{
-  width:min(500px, calc(100vw - 32px));
+  width:min(560px, calc(100vw - 32px));
   background:#fff; border-radius:16px; border:1px solid var(--line);
   box-shadow:0 20px 40px rgba(0,0,0,.25); padding:16px;
 }
-.app-modal-title{font-size:18px; font-weight:800; margin-bottom:10px}
-.app-modal-text{font-size:13px; color:var(--muted); margin-bottom:10px}
+.app-modal-title{font-size:20px; font-weight:800; margin-bottom:10px}
+.app-modal-text{font-size:14px; color:var(--muted); margin-bottom:10px}
 .app-modal-input,.app-modal-textarea{
   width:100%; border:1px solid #d7d2c7; border-radius:10px; padding:10px 12px; background:#fff; font:inherit;
 }
-.app-modal-textarea{min-height:100px; resize:vertical}
+.app-modal-textarea{min-height:120px; resize:vertical}
 .app-modal-actions{display:flex; gap:8px; justify-content:flex-end; flex-wrap:wrap; margin-top:12px}
 
 /* Стили для модального окна входа */
@@ -233,7 +122,7 @@ flex:0 0 auto;
 .login-modal .role-btn {
     flex: 1;
     padding: 12px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     border-radius: 12px;
     cursor: pointer;
@@ -253,189 +142,7 @@ flex:0 0 auto;
     display: block;
 }
 
-/* Мобильное меню (боковые панели) */
-.mobile-menu-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,.5);
-    z-index: 1000;
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-.mobile-menu-overlay.show {
-    display: block;
-    opacity: 1;
-}
-.mobile-menu-panel {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 85%;
-    max-width: 320px;
-    background: var(--panel);
-    z-index: 1001;
-    overflow-y: auto;
-    padding: 16px;
-    box-shadow: 0 0 20px rgba(0,0,0,.3);
-    transition: transform 0.3s ease;
-}
-.mobile-menu-panel.left {
-    left: 0;
-    transform: translateX(-100%);
-}
-.mobile-menu-panel.right {
-    right: 0;
-    transform: translateX(100%);
-}
-.mobile-menu-panel.show {
-    transform: translateX(0);
-}
-.mobile-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--line);
-}
-.mobile-menu-header h3 {
-    margin: 0;
-    font-size: 18px;
-    color: var(--gold);
-}
-.mobile-menu-close {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: var(--muted);
-}
-.mobile-menu-panel .list {
-    margin-bottom: 16px;
-}
-.mobile-menu-panel .item {
-    padding: 10px 12px;
-}
-.mobile-menu-footer {
-    margin-top: 20px;
-    padding-top: 12px;
-    border-top: 1px solid var(--line);
-}
-.mobile-menu-footer button {
-    width: 100%;
-}
-
-/* Адаптивность */
-@media (max-width: 1024px) {
-    .layout {
-        grid-template-columns: 260px 1fr 280px;
-        gap: 12px;
-        padding: 12px;
-    }
-    .panel {
-        padding: 12px;
-    }
-}
-
-@media (max-width: 768px) {
-    .layout {
-        display: block;
-        padding: 12px;
-    }
-    .desktop-only {
-        display: none !important;
-    }
-    .mobile-only {
-        display: block !important;
-    }
-    .mobile-buttons-container {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 8px !important;
-        align-items: center !important;
-    }
-    .panel {
-        margin-bottom: 12px;
-    }
-    .center-title {
-        font-size: 24px;
-    }
-    .card-text {
-        font-size: 14px;
-    }
-    .toolbar {
-        gap: 6px;
-    }
-    .small-btn {
-        padding: 6px 10px;
-        font-size: 11px;
-    }
-    .copy-btn {
-        min-width: 100px;
-        padding: 8px 12px;
-        font-size: 12px;
-    }
-    .return-btn {
-        min-width: 100%;
-        font-size: 16px;
-        padding: 10px;
-    }
-    .asset-editor-grid {
-        grid-template-columns: 1fr;
-    }
-    header {
-        padding: 8px 12px;
-    }
-    .logo {
-        font-size: 18px;
-        padding: 3px 8px;
-    }
-    .header-title {
-        font-size: 14px;
-    }
-    .header-sub {
-        font-size: 9px;
-    }
-    .menu-icon, .user-menu-btn {
-        padding: 6px 12px;
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 769px) {
-    .desktop-only {
-        display: flex !important;
-    }
-    .mobile-only {
-        display: none !important;
-    }
-}
-
-@media (max-width: 480px) {
-    .brand {
-        gap: 6px;
-    }
-    .logo {
-        font-size: 16px;
-    }
-    .header-title {
-        font-size: 12px;
-    }
-    .header-sub {
-        display: none;
-    }
-    .menu-icon, .user-menu-btn {
-        padding: 5px 10px;
-        font-size: 13px;
-    }
-    .menu-icon span, .user-menu-btn span {
-        font-size: 14px;
-    }
-}
+@media (max-width:1150px){.layout{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -444,97 +151,44 @@ flex:0 0 auto;
     <div class="logo">BORZO</div>
     <div><div class="header-title">Script Navigator</div><div class="header-sub">Внутренний навигатор скриптов</div></div>
   </div>
-  <div class="menu-buttons">
-    <!-- Десктопные кнопки (видны только на >768px) -->
-    <div class="desktop-only" style="display:flex;gap:8px;align-items:center">
-        <button id="downloadProjectBtn" class="small-btn gold-btn" style="display: none;">Скачать проект</button>
-        <button id="exportBtn" class="small-btn gold-btn" style="display: none;">Экспорт базы</button>
-        <select id="roleSelect" class="role-select"><option value="manager">Менеджер</option><option value="owner">Руководитель</option></select>
-        <button id="logoutBtn" class="small-btn" style="background:#2f2f2f; border-color:#666; color:#fff;">Выйти</button>
-    </div>
-    <!-- Мобильные кнопки (видны только на <768px) - горизонтальное расположение -->
-    <div class="mobile-only mobile-buttons-container" style="display:none;flex-direction:row;gap:8px;align-items:center">
-        <button id="mobileMenuLeftBtn" class="menu-icon" title="Магистраль">
-            <span>☰</span> Меню
-        </button>
-        <button id="mobileMenuRightBtn" class="menu-icon" title="Разделы">
-            <span>📁</span> Разделы
-        </button>
-        <div class="user-dropdown">
-            <button id="userMenuBtn" class="user-menu-btn" title="Меню пользователя">
-                <span>👤</span> Профиль
-            </button>
-            <div id="userDropdownMenu" class="user-dropdown-menu">
-                <div id="userDropdownRoleManager" class="user-dropdown-item" data-role="manager">
-                    <span>👤</span> Менеджер
-                </div>
-                <div id="userDropdownRoleOwner" class="user-dropdown-item" data-role="owner">
-                    <span>🧑‍💼</span> Руководитель
-                </div>
-                <div class="user-dropdown-divider"></div>
-                <div id="userDropdownLogout" class="user-dropdown-item logout">
-                    <span>🚪</span> Выйти
-                </div>
-            </div>
-        </div>
-    </div>
+  <div style="display:flex;gap:8px;align-items:center">
+    <button id="downloadProjectBtn" class="small-btn gold-btn" style="display: none;">Скачать проект</button>
+    <button id="exportBtn" class="small-btn gold-btn" style="display: none;">Экспорт базы</button>
+    <select id="roleSelect" class="role-select"><option value="manager">Менеджер</option><option value="owner">Руководитель</option></select>
+    <button id="logoutBtn" class="small-btn" style="background:#2f2f2f; border-color:#666; color:#fff;">Выйти</button>
   </div>
 </header>
 
-<!-- Основной контент (десктоп) -->
-<div class="layout desktop-only">
-  <aside class="panel" id="desktopLeftPanel">
+<div class="layout">
+  <aside class="panel">
     <div class="section-head"><div class="section-title">Магистраль</div></div>
-    <div id="mainList" class="list"></div>
+    <div id="mainList" class="list"><div class="item active" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Входящий старт</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Выбор модели</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Размер и цвет</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Город клиента</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Доставка и оплата</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Финальное подтверждение</div><div class="hidden-actions"></div></div></div><button class="small-btn gold-btn">+ предложить блок</button></div>
     <div class="divider"></div>
     <div class="section-head"><div class="section-title" style="font-size:18px">Предложения</div><div id="propBadge"></div></div>
     <div id="managerReplyArea" class="list"></div>
-    <div id="proposalList" class="list"></div>
+    <div id="proposalList" class="list"><div class="empty">Пока предложений нет</div></div>
   </aside>
-  <main class="panel white" id="centerPanel">
-    <div id="center"></div>
-  </main>
-  <aside class="panel" id="desktopRightPanel">
-    <div id="right"></div>
-  </aside>
-</div>
+  <main class="panel white"><div id="center"><div class="center-title">Входящий старт</div><div class="center-sub main">● Магистраль</div><div class="info-box gold-box">Если клиент сразу ушёл в уточняющий вопрос, после ответа его нужно вернуть в магистраль.</div><div class="card message-card" data-message-index="0"><div class="card-main"><div class="card-body"><div class="card-head"><div class="card-label">Стандартный входящий</div><div class="toolbar" style="margin-top:0"><button class="copy-btn" onclick="copyMessage(0)">Скопировать</button><button class="small-btn" onclick="startInlineProposal(0)">Предложить изменение</button></div></div><div class="card-text">Здравствуйте. Меня зовут Индира, менеджер BORZO.
 
-<!-- Мобильный контент -->
-<div class="mobile-only" style="display:none">
-  <main class="panel white" style="margin:0">
-    <div id="mobileCenter"></div>
-  </main>
-</div>
+Сейчас отправлю цены и краткое описание.</div><div class="material-row"><button class="small-btn" onclick="toggleAttachmentEditor(0)">Материалы</button><div class="drag-handle" draggable="true" data-drag-handle="0" title="Перетащить">⋮⋮</div></div></div></div></div><div class="card message-card" data-message-index="1"><div class="card-main"><div class="card-body"><div class="card-head"><div class="card-label">Если клиент сразу спросил город</div><div class="toolbar" style="margin-top:0"><button class="copy-btn" onclick="copyMessage(1)">Скопировать</button><button class="small-btn" onclick="startInlineProposal(1)">Предложить изменение</button></div></div><div class="card-text">Здравствуйте. Меня зовут Индира, менеджер BORZO.
 
-<!-- Мобильное левое меню (Магистраль) -->
-<div id="mobileMenuLeft" class="mobile-menu-panel left">
-    <div class="mobile-menu-header">
-        <h3>📋 Магистраль</h3>
-        <button class="mobile-menu-close" id="closeLeftMenu">✕</button>
-    </div>
-    <div id="mobileMainList" class="list"></div>
-    <div class="divider"></div>
-    <div class="section-head"><div class="section-title" style="font-size:16px">Предложения</div></div>
-    <div id="mobileProposalList" class="list"></div>
-    <div id="mobileManagerReplyArea" class="list"></div>
-    <div class="mobile-menu-footer">
-        <button id="mobileAddBlockBtn" class="small-btn gold-btn" style="width:100%">+ предложить блок</button>
-    </div>
-</div>
+Фабрика находится в Астане. Отправляем по всему Казахстану через Kaspi.
 
-<!-- Мобильное правое меню (Разделы) -->
-<div id="mobileMenuRight" class="mobile-menu-panel right">
-    <div class="mobile-menu-header">
-        <h3>📂 Разделы</h3>
-        <button class="mobile-menu-close" id="closeRightMenu">✕</button>
-    </div>
-    <div id="mobileRight"></div>
-    <div class="mobile-menu-footer">
-        <button id="mobileAddSectionBtn" class="small-btn gold-btn" style="width:100%">+ предложить раздел</button>
-    </div>
-</div>
+Сейчас отправлю цены и краткое описание.</div><div class="material-row"><button class="small-btn" onclick="toggleAttachmentEditor(1)">Материалы</button><div class="drag-handle" draggable="true" data-drag-handle="1" title="Перетащить">⋮⋮</div></div></div></div></div><div class="card message-card" data-message-index="2"><div class="card-main"><div class="card-body"><div class="card-head"><div class="card-label">Шапка + прайс</div><div class="toolbar" style="margin-top:0"><button class="copy-btn" onclick="copyMessage(2)">Скопировать</button><button class="small-btn" onclick="startInlineProposal(2)">Предложить изменение</button></div></div><div class="card-text">BORZO — дизайнерская консоль,
+которая станет украшением вашего интерьера.
 
-<div id="mobileMenuOverlay" class="mobile-menu-overlay"></div>
+LUX:
+3 м — 310 000 ₸
+3,5 м — 335 000 ₸
+4 м — 360 000 ₸
+
+GEOMETRY (модель 2026, с подсветкой):
+3 м — 335 000 ₸
+3,5 м — 360 000 ₸
+4 м — 385 000 ₸</div><div class="material-row"><button class="small-btn" onclick="toggleAttachmentEditor(2)">Материалы</button><div class="drag-handle" draggable="true" data-drag-handle="2" title="Перетащить">⋮⋮</div></div></div></div></div><div class="card message-card" data-message-index="3"><div class="card-main"><div class="card-body"><div class="card-head"><div class="card-label">Фильтр по сроку</div><div class="toolbar" style="margin-top:0"><button class="copy-btn" onclick="copyMessage(3)">Скопировать</button><button class="small-btn" onclick="startInlineProposal(3)">Предложить изменение</button></div></div><div class="card-text">Мы изготавливаем столы партиями и не держим большой склад,
+поэтому уточню — вы планируете покупку в ближайшее время?</div><div class="material-row"><button class="small-btn" onclick="toggleAttachmentEditor(3)">Материалы</button><div class="drag-handle" draggable="true" data-drag-handle="3" title="Перетащить">⋮⋮</div></div></div></div></div><div class="card"><div style="font-weight:700;margin-bottom:10px">Предложить новый вариант</div><input id="prop-name" class="input" placeholder="Назначение / когда использовать"><textarea id="prop-text" class="textarea" placeholder="Текст ответа"></textarea><div class="toolbar"><button class="small-btn gold-btn" onclick="saveNewVariantProposal()">Отправить предложение</button></div></div></div></main>
+  <aside class="panel"><div id="right"><div draggable="true" style="margin-bottom: 16px;"><div class="section-head"><div class="section-title" style="font-size:20px;cursor:pointer">Вопросы клиентов</div></div><div class="list"><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Где посмотреть</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Разница моделей</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Нестандартный размер</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Другой цвет</div><div class="hidden-actions"></div></div></div></div><button class="small-btn gold-btn">+ предложить элемент</button></div><div draggable="true" style="margin-bottom: 16px;"><div class="section-head"><div class="section-title" style="font-size:20px;cursor:pointer">Обработка возражений</div></div><div class="list"><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Дорого</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Сомнение в прочности</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Сомнение в качестве</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Доставка после 18:00</div><div class="hidden-actions"></div></div></div></div><button class="small-btn gold-btn">+ предложить элемент</button></div><div draggable="true" style="margin-bottom: 16px;"><div class="section-head"><div class="section-title" style="font-size:20px;cursor:pointer">Пауза</div></div><div class="list"><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Подумаю / позже</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Молчание после фильтра</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Выбрал модель и пропал</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Пропал после ссылки на оплату</div><div class="hidden-actions"></div></div></div></div><button class="small-btn gold-btn">+ предложить элемент</button></div><div draggable="true" style="margin-bottom: 16px;"><div class="section-head"><div class="section-title" style="font-size:20px;cursor:pointer">Закрытие клиента</div></div><div class="list"><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Дорого — закрытие</div><div class="hidden-actions"></div></div></div><div class="item" draggable="true" style="cursor: grab;"><div class="item-row"><div class="item-title">Не сейчас</div><div class="hidden-actions"></div></div></div></div><button class="small-btn gold-btn">+ предложить элемент</button></div><button class="small-btn gold-btn">+ предложить раздел</button></div></aside>
+</div>
 
 <script>
 const KEY='borzo_v7';
@@ -591,64 +245,10 @@ let inlineProposalIndex = null;
 let ownerEditProposalIndex = null;
 let assetEditIndex = null;
 
-// DOM элементы
 const roleSelect = document.getElementById('roleSelect');
 const exportBtn = document.getElementById('exportBtn');
 const downloadProjectBtn = document.getElementById('downloadProjectBtn');
 const logoutBtn = document.getElementById('logoutBtn');
-const mobileMenuLeftBtn = document.getElementById('mobileMenuLeftBtn');
-const mobileMenuRightBtn = document.getElementById('mobileMenuRightBtn');
-const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-const mobileMenuLeft = document.getElementById('mobileMenuLeft');
-const mobileMenuRight = document.getElementById('mobileMenuRight');
-const closeLeftMenu = document.getElementById('closeLeftMenu');
-const closeRightMenu = document.getElementById('closeRightMenu');
-const userMenuBtn = document.getElementById('userMenuBtn');
-const userDropdownMenu = document.getElementById('userDropdownMenu');
-const userDropdownRoleManager = document.getElementById('userDropdownRoleManager');
-const userDropdownRoleOwner = document.getElementById('userDropdownRoleOwner');
-const userDropdownLogout = document.getElementById('userDropdownLogout');
-
-// Функции управления мобильным меню
-function closeMobileMenus() {
-    if(mobileMenuLeft) mobileMenuLeft.classList.remove('show');
-    if(mobileMenuRight) mobileMenuRight.classList.remove('show');
-    if(mobileMenuOverlay) mobileMenuOverlay.classList.remove('show');
-    if(userDropdownMenu) userDropdownMenu.classList.remove('show');
-}
-function openLeftMenu() {
-    closeMobileMenus();
-    if(mobileMenuLeft) mobileMenuLeft.classList.add('show');
-    if(mobileMenuOverlay) mobileMenuOverlay.classList.add('show');
-}
-function openRightMenu() {
-    closeMobileMenus();
-    if(mobileMenuRight) mobileMenuRight.classList.add('show');
-    if(mobileMenuOverlay) mobileMenuOverlay.classList.add('show');
-}
-function toggleUserMenu() {
-    if(userDropdownMenu) {
-        userDropdownMenu.classList.toggle('show');
-    }
-}
-function closeUserMenu() {
-    if(userDropdownMenu) userDropdownMenu.classList.remove('show');
-}
-
-if (mobileMenuLeftBtn) mobileMenuLeftBtn.onclick = openLeftMenu;
-if (mobileMenuRightBtn) mobileMenuRightBtn.onclick = openRightMenu;
-if (closeLeftMenu) closeLeftMenu.onclick = closeMobileMenus;
-if (closeRightMenu) closeRightMenu.onclick = closeMobileMenus;
-if (mobileMenuOverlay) mobileMenuOverlay.onclick = closeMobileMenus;
-if (userMenuBtn) userMenuBtn.onclick = (e) => {
-    e.stopPropagation();
-    toggleUserMenu();
-};
-document.addEventListener('click', function(e) {
-    if (userDropdownMenu && !userMenuBtn?.contains(e.target) && !userDropdownMenu.contains(e.target)) {
-        closeUserMenu();
-    }
-});
 
 // Функция для сохранения авторизации
 function saveAuth(role) {
@@ -660,6 +260,7 @@ function checkAuth() {
     try {
         const auth = JSON.parse(localStorage.getItem(AUTH_KEY));
         if (auth && auth.role && (auth.role === 'manager' || auth.role === 'owner')) {
+            // Проверяем, что сессия не старше 24 часов
             if (Date.now() - auth.timestamp < 24 * 60 * 60 * 1000) {
                 state.role = auth.role;
                 return true;
@@ -676,95 +277,10 @@ function logout() {
     save();
     render();
     showLoginModal();
-    closeUserMenu();
 }
 
-// Функция смены роли с проверкой пароля
-async function switchRole(role) {
-    if (role === state.role) {
-        closeUserMenu();
-        return;
-    }
-    if (role === 'owner') {
-        const code = prompt('Введите код руководителя');
-        if (code !== '7004') {
-            alert('Неверный код');
-            closeUserMenu();
-            return;
-        }
-        state.role = 'owner';
-        saveAuth('owner');
-    } else {
-        state.role = 'manager';
-        saveAuth('manager');
-    }
-    updateRoleSelects();
-    save();
-    render();
-    closeUserMenu();
-}
-
-function updateRoleSelects() {
-    if (roleSelect) roleSelect.value = state.role;
-    // Обновляем активный класс в выпадающем меню
-    if (userDropdownRoleManager) {
-        if (state.role === 'manager') {
-            userDropdownRoleManager.classList.add('active');
-            userDropdownRoleOwner.classList.remove('active');
-        } else {
-            userDropdownRoleManager.classList.remove('active');
-            userDropdownRoleOwner.classList.add('active');
-        }
-    }
-}
-
-if (userDropdownRoleManager) userDropdownRoleManager.onclick = () => switchRole('manager');
-if (userDropdownRoleOwner) userDropdownRoleOwner.onclick = () => switchRole('owner');
-if (userDropdownLogout) userDropdownLogout.onclick = logout;
-
-if (roleSelect) roleSelect.addEventListener('change', e => {
-    const role = e.target.value;
-    if (role === 'owner') {
-        const code = prompt('Введите код руководителя');
-        if (code !== '7004') {
-            alert('Неверный код');
-            state.role = 'manager';
-            roleSelect.value = 'manager';
-            saveAuth('manager');
-            save();
-            render();
-            return;
-        }
-        state.role = 'owner';
-        saveAuth('owner');
-    } else {
-        state.role = 'manager';
-        saveAuth('manager');
-    }
-    updateRoleSelects();
-    save();
-    render();
-});
-
-if (logoutBtn) logoutBtn.addEventListener('click', logout);
-
-if (exportBtn) exportBtn.addEventListener('click', ()=>exportDatabase());
-if (downloadProjectBtn) downloadProjectBtn.addEventListener('click', ()=>downloadProjectFile());
-const isOwner = ()=> state.role === 'owner';
-function save(){ localStorage.setItem(KEY, JSON.stringify(state)); }
-
-function closeAppModal(){
-  const backdrop = document.getElementById('appModalBackdrop');
-  backdrop.classList.remove('show');
-  backdrop.className = 'app-modal-backdrop';
-  document.getElementById('appModalTitle').textContent = '';
-  document.getElementById('appModalText').textContent = '';
-  document.getElementById('appModalFields').innerHTML = '';
-  document.getElementById('appModalActions').innerHTML = '';
-}
-
+// Функция показа модального окна входа
 function showLoginModal() {
-    closeAppModal();
     const backdrop = document.getElementById('appModalBackdrop');
     const modalTitle = document.getElementById('appModalTitle');
     const modalText = document.getElementById('appModalText');
@@ -788,13 +304,16 @@ function showLoginModal() {
     const cancelBtn = document.createElement('button');
     cancelBtn.className = 'small-btn';
     cancelBtn.textContent = 'Отмена';
-    cancelBtn.onclick = () => { closeAppModal(); };
+    cancelBtn.onclick = () => {
+        closeAppModal();
+        showLoginModal();
+    };
     
     const loginBtn = document.createElement('button');
     loginBtn.className = 'small-btn gold-btn';
     loginBtn.textContent = 'Войти';
     loginBtn.onclick = () => {
-        const selectedRole = document.querySelector('.role-btn.active')?.textContent || 'Менеджер';
+        const selectedRole = document.querySelector('.role-btn.active').textContent;
         const password = document.getElementById('loginPassword').value;
         
         if (selectedRole === 'Менеджер') {
@@ -829,21 +348,20 @@ function showLoginModal() {
         const ownerBtn = document.getElementById('loginRoleOwner');
         const passwordField = document.getElementById('loginPasswordField');
         
-        if (managerBtn && ownerBtn && passwordField) {
-            managerBtn.onclick = () => {
-                managerBtn.classList.add('active');
-                ownerBtn.classList.remove('active');
-                passwordField.classList.add('show');
-            };
-            ownerBtn.onclick = () => {
-                ownerBtn.classList.add('active');
-                managerBtn.classList.remove('active');
-                passwordField.classList.add('show');
-            };
-        }
+        managerBtn.onclick = () => {
+            managerBtn.classList.add('active');
+            ownerBtn.classList.remove('active');
+            passwordField.classList.add('show');
+        };
+        ownerBtn.onclick = () => {
+            ownerBtn.classList.add('active');
+            managerBtn.classList.remove('active');
+            passwordField.classList.add('show');
+        };
     }, 0);
 }
 
+// При загрузке страницы проверяем авторизацию
 window.addEventListener('load', () => {
     if (!checkAuth()) {
         showLoginModal();
@@ -851,6 +369,37 @@ window.addEventListener('load', () => {
         render();
     }
 });
+
+logoutBtn.addEventListener('click', () => {
+    logout();
+});
+
+roleSelect.addEventListener('change', e=>{
+  const nextRole = e.target.value;
+  if(nextRole === 'owner'){
+    const code = prompt('Введите код руководителя');
+    if(code !== '7004'){
+      alert('Неверный код');
+      state.role = 'manager';
+      roleSelect.value = 'manager';
+      saveAuth('manager');
+      save();
+      render();
+      return;
+    }
+    state.role = 'owner';
+    saveAuth('owner');
+  } else {
+    state.role = 'manager';
+    saveAuth('manager');
+  }
+  save();
+  render();
+});
+exportBtn.addEventListener('click', ()=>exportDatabase());
+downloadProjectBtn.addEventListener('click', ()=>downloadProjectFile());
+const isOwner = ()=> state.role === 'owner';
+function save(){ localStorage.setItem(KEY, JSON.stringify(state)); }
 
 function downloadProjectFile(){
   try{
@@ -1002,6 +551,15 @@ function consumeManagerFeedback(){
   showAlertModal('Ответ от руководителя', msg.text || '');
 }
 
+function closeAppModal(){
+  const backdrop = document.getElementById('appModalBackdrop');
+  backdrop.classList.remove('show');
+  backdrop.className = 'app-modal-backdrop';
+  document.getElementById('appModalTitle').textContent = '';
+  document.getElementById('appModalText').textContent = '';
+  document.getElementById('appModalFields').innerHTML = '';
+  document.getElementById('appModalActions').innerHTML = '';
+}
 function showPromptModal(title, label, defaultValue=''){
   return new Promise(resolve => {
     const backdrop = document.getElementById('appModalBackdrop');
@@ -1068,9 +626,8 @@ function openBlock(name){
   if(state.blocks[name] && state.blocks[name].kind === 'main') state.lastMain = name;
   editBlockName = null; editSectionName = null; editMessageIndex = null; inlineProposalIndex = null;
   save(); render();
-  closeMobileMenus();
 }
-function returnToMain(){ state.currentBlock = state.lastMain || state.mainOrder[0]; inlineProposalIndex = null; save(); render(); closeMobileMenus(); }
+function returnToMain(){ state.currentBlock = state.lastMain || state.mainOrder[0]; inlineProposalIndex = null; save(); render(); }
 
 async function createProposal(targetType,targetName){
   let result = null;
@@ -1198,6 +755,8 @@ async function rejectProposal(index){
   render();
 }
 
+
+
 function updateAssetFields(i){
   const type = document.getElementById('asset-type-'+i).value;
   const container = document.getElementById('asset-fields-'+i);
@@ -1309,104 +868,158 @@ html += "<div class='asset-editor'>"
   return html;
 }
 
-function renderMain(containerId, isMobile = false){
-  const el = document.getElementById(containerId);
-  if(!el) return;
+function renderMain(){
+  const el = document.getElementById('mainList');
   el.innerHTML = '';
   state.mainOrder.forEach(name=>{
     const active = state.currentBlock === name ? ' active' : '';
+    const show = editBlockName === name ? ' show' : '';
     const div = document.createElement('div');
-    div.className = 'item' + active;
-    div.onclick = function(e){ if(e.target.closest('button')) return; openBlock(name); };
-    div.innerHTML = "<div class='item-row'><div class='item-title'>"+esc(name)+"</div></div>";
+    div.className = 'item' + active + show;
+
+    if(editBlockName === name){
+      div.innerHTML = "<div class='item-row'><input id='edit-block-name' class='item-input' value='"+escAttr(name)+"'><div class='hidden-actions' style='display:flex'><button class='icon-btn' onclick=\"saveBlockName('"+escJs(name)+"')\">✓</button><button class='icon-btn' onclick='cancelInline()'>✕</button><button class='icon-btn danger-btn' onclick=\"deleteBlock('"+escJs(name)+"')\">🗑</button></div></div>";
+    } else {
+      div.draggable = true;
+      div.ondragstart = function(){ startDrag('main', { name }); };
+      div.style.cursor = 'grab';
+      div.ondragover = function(e){ e.preventDefault(); div.classList.add('drag-over'); };
+      div.ondragleave = function(){ div.classList.remove('drag-over'); };
+      div.ondrop = function(e){ e.preventDefault(); handleMainDrop(name); };
+      div.onclick = function(e){ if(e.target.closest('button')) return; openBlock(name); };
+      div.innerHTML = "<div class='item-row'><div class='item-title' "+(isOwner() ? "ondblclick=\"startEditBlock('"+escJs(name)+"')\"" : "")+">"+esc(name)+"</div><div class='hidden-actions'>"+(isOwner() ? "<button class='icon-btn' onclick=\"startEditBlock('"+escJs(name)+"')\">✎</button><button class='icon-btn danger-btn' onclick=\"deleteBlock('"+escJs(name)+"')\">🗑</button>" : "")+"</div></div>";
+    }
     el.appendChild(div);
   });
+
+  const btn = document.createElement('button');
+  btn.className = 'small-btn gold-btn';
+  btn.textContent = isOwner() ? '+ блок' : '+ предложить блок';
+  btn.onclick = async ()=> {
+    if(isOwner()){
+      const n = await showPromptModal('Название нового блока магистрали', 'Название блока');
+      if(!n || !n.trim()) return;
+      const name = n.trim();
+      if(state.blocks[name]){ await showAlertModal('Ошибка','Такой блок уже есть'); return; }
+      state.mainOrder.push(name);
+      state.blocks[name] = {kind:'main',note:'',hint:'',messages:[]};
+      state.currentBlock = name;
+      save(); render();
+    } else {
+      createProposal('main-list','Магистраль');
+    }
+  };
+  el.appendChild(btn);
 }
 
-function renderRightMobile(containerId){
-  const el = document.getElementById(containerId);
-  if(!el) return;
-  el.innerHTML = '';
+function renderRight(){
+  const wrap = document.getElementById('right');
+  wrap.innerHTML = '';
   state.sectionOrder.forEach(sectionName=>{
     const group = document.createElement('div');
     group.style.marginBottom = '16px';
-    group.innerHTML = "<div class='section-head'><div class='section-title' style='font-size:18px;cursor:pointer'>"+esc(sectionName)+"</div></div>";
+    group.draggable = true;
+    group.ondragstart = function(){ startDrag('section', { sectionName }); };
+    group.ondragover = function(e){ 
+      if(dragState && dragState.type === 'section'){
+        e.preventDefault(); 
+        group.classList.add('drag-over');
+      }
+    };
+    group.ondragleave = function(){ group.classList.remove('drag-over'); };
+    group.ondrop = function(e){ 
+      if(dragState && dragState.type === 'section'){
+        e.preventDefault(); 
+        handleSectionDrop(sectionName); 
+      }
+    };
+
+    if(editSectionName === sectionName){
+      group.innerHTML = "<div class='section-head'><input id='edit-section-name' class='item-input' value='"+escAttr(sectionName)+"'><div style='display:flex;gap:6px'><button class='icon-btn' onclick=\"saveSectionName('"+escJs(sectionName)+"')\">✓</button><button class='icon-btn' onclick='cancelInline()'>✕</button><button class='icon-btn danger-btn' onclick=\"deleteSection('"+escJs(sectionName)+"')\">🗑</button></div></div>";
+    } else {
+      group.innerHTML = "<div class='section-head'><div class='section-title' style='font-size:20px;cursor:pointer' "+(isOwner() ? "ondblclick=\"startEditSection('"+escJs(sectionName)+"')\"" : "")+">"+esc(sectionName)+"</div>"+(isOwner() ? "<div class='hidden-actions' style='display:flex'><button class='icon-btn' onclick=\"startEditSection('"+escJs(sectionName)+"')\">✎</button><button class='icon-btn danger-btn' onclick=\"deleteSection('"+escJs(sectionName)+"')\">🗑</button></div>" : "")+"</div>";
+    }
+
     const list = document.createElement('div');
     list.className = 'list';
     (state.sections[sectionName] || []).forEach(name=>{
       const active = state.currentBlock === name ? ' active' : '';
+      const show = editBlockName === name ? ' show' : '';
       const div = document.createElement('div');
-      div.className = 'item' + active;
+      div.className = 'item' + active + show;
+
+      if(editBlockName === name){
+        div.innerHTML = "<div class='item-row'><input id='edit-block-name' class='item-input' value='"+escAttr(name)+"'><div class='hidden-actions' style='display:flex'><button class='icon-btn' onclick=\"saveBlockName('"+escJs(name)+"')\">✓</button><button class='icon-btn' onclick='cancelInline()'>✕</button><button class='icon-btn danger-btn' onclick=\"deleteBlock('"+escJs(name)+"')\">🗑</button></div></div>";
+      } else {
+        div.draggable = true;
+      div.ondragstart = function(e){ e.stopPropagation(); startDrag('section-item', { sectionName, name }); };
+      div.style.cursor = 'grab';
+      div.ondragover = function(e){
+        if(dragState && dragState.type === 'section-item' && dragState.sectionName === sectionName){
+          e.preventDefault();
+          e.stopPropagation();
+          div.classList.add('drag-over');
+        }
+      };
+      div.ondragleave = function(){ div.classList.remove('drag-over'); };
+      div.ondrop = function(e){
+        if(dragState && dragState.type === 'section-item' && dragState.sectionName === sectionName){
+          e.preventDefault();
+          e.stopPropagation();
+          handleSectionItemDrop(sectionName, name);
+        }
+      };
       div.onclick = function(e){ if(e.target.closest('button')) return; openBlock(name); };
-      div.innerHTML = "<div class='item-row'><div class='item-title'>"+esc(name)+"</div></div>";
+      div.innerHTML = "<div class='item-row'><div class='item-title' "+(isOwner() ? "ondblclick=\"startEditBlock('"+escJs(name)+"')\"" : "")+">"+esc(name)+"</div><div class='hidden-actions'>"+(isOwner() ? "<button class='icon-btn' onclick=\"startEditBlock('"+escJs(name)+"')\">✎</button><button class='icon-btn danger-btn' onclick=\"deleteBlock('"+escJs(name)+"')\">🗑</button>" : "")+"</div></div>";
+      }
       list.appendChild(div);
     });
     group.appendChild(list);
-    el.appendChild(group);
-  });
-}
 
-function renderProposalsMobile(containerId){
-  const el = document.getElementById(containerId);
-  if(!el) return;
-  el.innerHTML = '';
-  if(!state.proposals.length){ el.innerHTML = "<div class='empty'>Пока предложений нет</div>"; return; }
-  state.proposals.forEach((p, i)=>{
-    let target = 'Блок: ' + p.targetName;
-    if(p.targetType === 'main-list') target = 'Магистраль';
-    if(p.targetType === 'section') target = 'Раздел: ' + p.targetName;
-    if(p.targetType === 'new-section') target = 'Новый раздел';
-    const div = document.createElement('div');
-    div.className = 'proposal-card';
-    let previewHtml = "<div class='muted' style='margin-bottom:6px'>"+esc(target)+"</div>";
-    if(p.targetType === 'new-section'){
-      previewHtml += "<div class='proposal-title'>Раздел: "+esc(p.sectionName || '')+"</div>";
-      previewHtml += "<div class='muted' style='line-height:1.45;margin-bottom:4px'><b>Первый элемент:</b> "+esc(p.blockName || '')+"</div>";
-      previewHtml += "<div class='muted' style='line-height:1.45;margin-bottom:4px'><b>Назначение:</b> "+esc(p.condition || '')+"</div>";
-      previewHtml += "<div class='muted' style='line-height:1.45'><b>Текст:</b> "+esc(p.text || '')+"</div>";
-    } else if(p.targetType === 'main-list'){
-      previewHtml += "<div class='proposal-title'>Блок: "+esc(p.blockName || '')+"</div>";
-      previewHtml += "<div class='muted' style='line-height:1.45;margin-bottom:4px'><b>Назначение:</b> "+esc(p.condition || '')+"</div>";
-      previewHtml += "<div class='muted' style='line-height:1.45'><b>Текст:</b> "+esc(p.text || '')+"</div>";
-    } else if(p.targetType === 'section'){
-      previewHtml += "<div class='proposal-title'>Элемент: "+esc(p.blockName || '')+"</div>";
-      previewHtml += "<div class='muted' style='line-height:1.45;margin-bottom:4px'><b>Назначение:</b> "+esc(p.condition || '')+"</div>";
-      previewHtml += "<div class='muted' style='line-height:1.45'><b>Текст:</b> "+esc(p.text || '')+"</div>";
-    } else {
-      previewHtml += "<div class='proposal-title'>"+esc(p.condition)+"</div><div class='muted' style='line-height:1.45'>"+esc(p.text)+"</div>";
-    }
-    div.innerHTML = previewHtml;
-    el.appendChild(div);
-  });
-}
-
-function renderManagerReplyMobile(containerId){
-  const el = document.getElementById(containerId);
-  if(!el) return;
-  el.innerHTML = '';
-  if(isOwner()) return;
-  if(Array.isArray(state.managerMessages) && state.managerMessages.length){
-    const div = document.createElement('div');
-    div.className = 'proposal-card';
-    div.innerHTML = "<div class='proposal-title'>Ответ от руководителя</div><div class='muted'>Есть новый комментарий</div>";
     const btn = document.createElement('button');
     btn.className = 'small-btn gold-btn';
-    btn.textContent = 'Открыть';
-    btn.onclick = ()=>consumeManagerFeedback();
-    div.appendChild(btn);
-    el.appendChild(div);
-  }
+    btn.textContent = isOwner() ? '+ элемент' : '+ предложить элемент';
+    btn.onclick = async ()=> {
+      if(isOwner()){
+        const n = await showPromptModal('Название нового элемента', 'Название элемента');
+        if(!n || !n.trim()) return;
+        const name = n.trim();
+        if(state.blocks[name]){ await showAlertModal('Ошибка','Такой блок уже есть'); return; }
+        state.blocks[name] = {kind:'side',note:'',hint:'',messages:[]};
+        state.sections[sectionName].push(name);
+        state.currentBlock = name;
+        save(); render();
+      } else {
+        createProposal('section', sectionName);
+      }
+    };
+    group.appendChild(btn);
+    wrap.appendChild(group);
+  });
+
+  const addSec = document.createElement('button');
+  addSec.className = 'small-btn gold-btn';
+  addSec.textContent = isOwner() ? '+ раздел' : '+ предложить раздел';
+  addSec.onclick = async ()=> {
+    if(isOwner()){
+      const n = await showPromptModal('Название нового раздела', 'Название раздела');
+      if(!n || !n.trim()) return;
+      const name = n.trim();
+      if(state.sections[name]){ await showAlertModal('Ошибка','Такой раздел уже есть'); return; }
+      state.sectionOrder.push(name);
+      state.sections[name] = [];
+      save(); render();
+    } else {
+      createProposal('new-section','Новый раздел');
+    }
+  };
+  wrap.appendChild(addSec);
 }
 
 function renderCenter(){
   const block = state.blocks[state.currentBlock];
-  const elDesktop = document.getElementById('center');
-  const elMobile = document.getElementById('mobileCenter');
-  if(!block){ 
-    if(elDesktop) elDesktop.innerHTML = "<div class='empty'>Блок не найден</div>";
-    if(elMobile) elMobile.innerHTML = "<div class='empty'>Блок не найден</div>";
-    return; 
-  }
+  const el = document.getElementById('center');
+  if(!block){ el.innerHTML = "<div class='empty'>Блок не найден</div>"; return; }
 
   let html = "<div class='center-title'>"+esc(state.currentBlock)+"</div><div class='center-sub "+(block.kind==='main'?'main':'side')+"'>"+(block.kind==='main'?'● Магистраль':'● Ветка сценария')+"</div>";
   if(block.kind !== 'main'){
@@ -1438,10 +1051,8 @@ function renderCenter(){
     html += "<div class='card'><div style='font-weight:700;margin-bottom:10px'>Предложить новый вариант</div><input id='prop-name' class='input' placeholder='Назначение / когда использовать'><textarea id='prop-text' class='textarea' placeholder='Текст ответа'></textarea><div class='toolbar'><button class='small-btn gold-btn' onclick='saveNewVariantProposal()'>Отправить предложение</button></div></div>";
   }
 
-  if(elDesktop) elDesktop.innerHTML = html;
-  if(elMobile) elMobile.innerHTML = html;
-  
-  document.querySelectorAll('.message-card').forEach(card => {
+  el.innerHTML = html;
+  el.querySelectorAll('.message-card').forEach(card => {
     const idx = parseInt(card.getAttribute('data-message-index'), 10);
     const handle = card.querySelector('[data-drag-handle]');
     if(handle){
@@ -1453,11 +1064,102 @@ function renderCenter(){
   });
 }
 
-function renderProposalsDesktop(){
-  const badge = document.getElementById('propBadge');
-  if(badge) badge.innerHTML = state.proposals.length ? "<span class='badge'>"+state.proposals.length+"</span>" : "";
-  const el = document.getElementById('proposalList');
+
+function startOwnerEditProposal(i){
+  ownerEditProposalIndex = i;
+  renderProposals();
+}
+function cancelOwnerEditProposal(){
+  ownerEditProposalIndex = null;
+  renderProposals();
+}
+function saveOwnerEditedProposal(i){
+  const p = state.proposals[i];
+  if(!p) return;
+  const conditionEl = document.getElementById('owner-prop-condition-' + i);
+  const textEl = document.getElementById('owner-prop-text-' + i);
+  const blockEl = document.getElementById('owner-prop-block-' + i);
+
+  const newCondition = conditionEl ? conditionEl.value.trim() : p.condition;
+  const newText = textEl ? textEl.value.trim() : p.text;
+  const newBlock = blockEl ? blockEl.value.trim() : (p.blockName || p.condition);
+
+  if(!newCondition || !newText) return;
+
+  p.condition = newCondition;
+  p.text = newText;
+  if(p.targetType === 'main-list' || p.targetType === 'section' || p.targetType === 'new-section'){
+    p.blockName = newBlock;
+  }
+
+  ownerEditProposalIndex = null;
+  save();
+  renderProposals();
+}
+function approveEditedProposal(i){
+  ownerEditProposalIndex = null;
+  save();
+  approveProposal(i, false);
+}
+
+
+function startOwnerEditProposal(i){
+  ownerEditProposalIndex = i;
+  renderProposals();
+}
+function cancelOwnerEditProposal(){
+  ownerEditProposalIndex = null;
+  renderProposals();
+}
+function saveOwnerEditedProposal(i){
+  const p = state.proposals[i];
+  if(!p) return;
+  const condEl = document.getElementById('owner-prop-condition-' + i);
+  const textEl = document.getElementById('owner-prop-text-' + i);
+  const blockEl = document.getElementById('owner-prop-block-' + i);
+  const sectionEl = document.getElementById('owner-prop-section-' + i);
+
+  const newCondition = condEl ? condEl.value.trim() : p.condition;
+  const newText = textEl ? textEl.value.trim() : p.text;
+  if(!newCondition || !newText) return;
+
+  p.condition = newCondition;
+  p.text = newText;
+
+  if(blockEl){ p.blockName = blockEl.value.trim() || p.blockName || ''; }
+  if(sectionEl){ p.sectionName = sectionEl.value.trim() || p.sectionName || ''; }
+
+  ownerEditProposalIndex = null;
+  save();
+  renderProposals();
+}
+
+
+function renderManagerReply(){
+  const el = document.getElementById('managerReplyArea');
   if(!el) return;
+  el.innerHTML = '';
+  if(isOwner()) return;
+  if(Array.isArray(state.managerMessages) && state.managerMessages.length){
+    const div = document.createElement('div');
+    div.className = 'proposal-card';
+    div.innerHTML = "<div class='proposal-title'>Ответ от руководителя</div><div class='muted'>Есть новый комментарий</div>";
+    const tools = document.createElement('div');
+    tools.className = 'toolbar';
+    const btn = document.createElement('button');
+    btn.className = 'small-btn gold-btn';
+    btn.textContent = 'Открыть';
+    btn.onclick = ()=>consumeManagerFeedback();
+    tools.appendChild(btn);
+    div.appendChild(tools);
+    el.appendChild(div);
+  }
+}
+
+function renderProposals(){
+  const badge = document.getElementById('propBadge');
+  badge.innerHTML = state.proposals.length ? "<span class='badge'>"+state.proposals.length+"</span>" : "";
+  const el = document.getElementById('proposalList');
   el.innerHTML = '';
   if(!state.proposals.length){ el.innerHTML = "<div class='empty'>Пока предложений нет</div>"; return; }
 
@@ -1581,37 +1283,6 @@ function renderProposalsDesktop(){
   });
 }
 
-function startOwnerEditProposal(i){
-  ownerEditProposalIndex = i;
-  renderProposalsDesktop();
-}
-function cancelOwnerEditProposal(){
-  ownerEditProposalIndex = null;
-  renderProposalsDesktop();
-}
-function saveOwnerEditedProposal(i){
-  const p = state.proposals[i];
-  if(!p) return;
-  const condEl = document.getElementById('owner-prop-condition-' + i);
-  const textEl = document.getElementById('owner-prop-text-' + i);
-  const blockEl = document.getElementById('owner-prop-block-' + i);
-  const sectionEl = document.getElementById('owner-prop-section-' + i);
-
-  const newCondition = condEl ? condEl.value.trim() : p.condition;
-  const newText = textEl ? textEl.value.trim() : p.text;
-  if(!newCondition || !newText) return;
-
-  p.condition = newCondition;
-  p.text = newText;
-
-  if(blockEl){ p.blockName = blockEl.value.trim() || p.blockName || ''; }
-  if(sectionEl){ p.sectionName = sectionEl.value.trim() || p.sectionName || ''; }
-
-  ownerEditProposalIndex = null;
-  save();
-  renderProposalsDesktop();
-}
-
 async function editProposalAsManager(i){
   const p = state.proposals[i];
   if(!p) return;
@@ -1637,138 +1308,16 @@ async function editProposalAsManager(i){
     p.text = result.f3.trim() || p.text;
   }
   save();
-  renderProposalsDesktop();
+  renderProposals();
 }
 async function deleteProposalAsManager(i){
   const ok = await showConfirmModal('Удалить предложение?', 'Предложение будет удалено из списка.');
   if(!ok) return;
   state.proposals.splice(i,1);
   save();
-  renderProposalsDesktop();
+  renderProposals();
 }
 
-function renderManagerReplyDesktop(){
-  const el = document.getElementById('managerReplyArea');
-  if(!el) return;
-  el.innerHTML = '';
-  if(isOwner()) return;
-  if(Array.isArray(state.managerMessages) && state.managerMessages.length){
-    const div = document.createElement('div');
-    div.className = 'proposal-card';
-    div.innerHTML = "<div class='proposal-title'>Ответ от руководителя</div><div class='muted'>Есть новый комментарий</div>";
-    const btn = document.createElement('button');
-    btn.className = 'small-btn gold-btn';
-    btn.textContent = 'Открыть';
-    btn.onclick = ()=>consumeManagerFeedback();
-    div.appendChild(btn);
-    el.appendChild(div);
-  }
-}
-
-function renderRightDesktop(){
-  const wrap = document.getElementById('right');
-  if(!wrap) return;
-  wrap.innerHTML = '';
-  state.sectionOrder.forEach(sectionName=>{
-    const group = document.createElement('div');
-    group.style.marginBottom = '16px';
-    group.draggable = true;
-    group.ondragstart = function(){ startDrag('section', { sectionName }); };
-    group.ondragover = function(e){ 
-      if(dragState && dragState.type === 'section'){
-        e.preventDefault(); 
-        group.classList.add('drag-over');
-      }
-    };
-    group.ondragleave = function(){ group.classList.remove('drag-over'); };
-    group.ondrop = function(e){ 
-      if(dragState && dragState.type === 'section'){
-        e.preventDefault(); 
-        handleSectionDrop(sectionName); 
-      }
-    };
-
-    if(editSectionName === sectionName){
-      group.innerHTML = "<div class='section-head'><input id='edit-section-name' class='item-input' value='"+escAttr(sectionName)+"'><div style='display:flex;gap:6px'><button class='icon-btn' onclick=\"saveSectionName('"+escJs(sectionName)+"')\">✓</button><button class='icon-btn' onclick='cancelInline()'>✕</button><button class='icon-btn danger-btn' onclick=\"deleteSection('"+escJs(sectionName)+"')\">🗑</button></div></div>";
-    } else {
-      group.innerHTML = "<div class='section-head'><div class='section-title' style='font-size:20px;cursor:pointer' "+(isOwner() ? "ondblclick=\"startEditSection('"+escJs(sectionName)+"')\"" : "")+">"+esc(sectionName)+"</div>"+(isOwner() ? "<div class='hidden-actions' style='display:flex'><button class='icon-btn' onclick=\"startEditSection('"+escJs(sectionName)+"')\">✎</button><button class='icon-btn danger-btn' onclick=\"deleteSection('"+escJs(sectionName)+"')\">🗑</button></div>" : "")+"</div>";
-    }
-
-    const list = document.createElement('div');
-    list.className = 'list';
-    (state.sections[sectionName] || []).forEach(name=>{
-      const active = state.currentBlock === name ? ' active' : '';
-      const show = editBlockName === name ? ' show' : '';
-      const div = document.createElement('div');
-      div.className = 'item' + active + show;
-
-      if(editBlockName === name){
-        div.innerHTML = "<div class='item-row'><input id='edit-block-name' class='item-input' value='"+escAttr(name)+"'><div class='hidden-actions' style='display:flex'><button class='icon-btn' onclick=\"saveBlockName('"+escJs(name)+"')\">✓</button><button class='icon-btn' onclick='cancelInline()'>✕</button><button class='icon-btn danger-btn' onclick=\"deleteBlock('"+escJs(name)+"')\">🗑</button></div></div>";
-      } else {
-        div.draggable = true;
-        div.ondragstart = function(e){ e.stopPropagation(); startDrag('section-item', { sectionName, name }); };
-        div.style.cursor = 'grab';
-        div.ondragover = function(e){
-          if(dragState && dragState.type === 'section-item' && dragState.sectionName === sectionName){
-            e.preventDefault();
-            e.stopPropagation();
-            div.classList.add('drag-over');
-          }
-        };
-        div.ondragleave = function(){ div.classList.remove('drag-over'); };
-        div.ondrop = function(e){
-          if(dragState && dragState.type === 'section-item' && dragState.sectionName === sectionName){
-            e.preventDefault();
-            e.stopPropagation();
-            handleSectionItemDrop(sectionName, name);
-          }
-        };
-        div.onclick = function(e){ if(e.target.closest('button')) return; openBlock(name); };
-        div.innerHTML = "<div class='item-row'><div class='item-title' "+(isOwner() ? "ondblclick=\"startEditBlock('"+escJs(name)+"')\"" : "")+">"+esc(name)+"</div><div class='hidden-actions'>"+(isOwner() ? "<button class='icon-btn' onclick=\"startEditBlock('"+escJs(name)+"')\">✎</button><button class='icon-btn danger-btn' onclick=\"deleteBlock('"+escJs(name)+"')\">🗑</button>" : "")+"</div></div>";
-      }
-      list.appendChild(div);
-    });
-    group.appendChild(list);
-
-    const btn = document.createElement('button');
-    btn.className = 'small-btn gold-btn';
-    btn.textContent = isOwner() ? '+ элемент' : '+ предложить элемент';
-    btn.onclick = async ()=> {
-      if(isOwner()){
-        const n = await showPromptModal('Название нового элемента', 'Название элемента');
-        if(!n || !n.trim()) return;
-        const name = n.trim();
-        if(state.blocks[name]){ await showAlertModal('Ошибка','Такой блок уже есть'); return; }
-        state.blocks[name] = {kind:'side',note:'',hint:'',messages:[]};
-        state.sections[sectionName].push(name);
-        state.currentBlock = name;
-        save(); render();
-      } else {
-        createProposal('section', sectionName);
-      }
-    };
-    group.appendChild(btn);
-    wrap.appendChild(group);
-  });
-
-  const addSec = document.createElement('button');
-  addSec.className = 'small-btn gold-btn';
-  addSec.textContent = isOwner() ? '+ раздел' : '+ предложить раздел';
-  addSec.onclick = async ()=> {
-    if(isOwner()){
-      const n = await showPromptModal('Название нового раздела', 'Название раздела');
-      if(!n || !n.trim()) return;
-      const name = n.trim();
-      if(state.sections[name]){ await showAlertModal('Ошибка','Такой раздел уже есть'); return; }
-      state.sectionOrder.push(name);
-      state.sections[name] = [];
-      save(); render();
-    } else {
-      createProposal('new-section','Новый раздел');
-    }
-  };
-  wrap.appendChild(addSec);
-}
 
 function startEditBlock(name){ editBlockName = name; editSectionName = null; render(); }
 function saveBlockName(oldName){
@@ -1795,6 +1344,7 @@ function saveSectionName(oldName){
   state.proposals.forEach(p => { if(p.targetType === 'section' && p.targetName === oldName) p.targetName = newName; });
   editSectionName = null; save(); render();
 }
+
 async function deleteBlock(name){
   const ok = await showConfirmModal('Удалить блок?', 'Блок будет удалён из списка.');
   if(!ok) return;
@@ -1823,6 +1373,7 @@ async function deleteBlock(name){
   save();
   render();
 }
+
 async function deleteSection(name){
   const ok = await showConfirmModal('Удалить раздел?', 'Раздел и его элементы будут удалены.');
   if(!ok) return;
@@ -1889,28 +1440,20 @@ function saveNewVariantProposal(){
 }
 
 function render(){
-  updateRoleSelects();
+  roleSelect.value = state.role || 'manager';
+  // Кнопка "Скачать проект" и "Экспорт базы" видны только для руководителя
   if (isOwner()) {
-    if(downloadProjectBtn) downloadProjectBtn.style.display = 'inline-block';
-    if(exportBtn) exportBtn.style.display = 'inline-block';
+    downloadProjectBtn.style.display = 'inline-block';
+    exportBtn.style.display = 'inline-block';
   } else {
-    if(downloadProjectBtn) downloadProjectBtn.style.display = 'none';
-    if(exportBtn) exportBtn.style.display = 'none';
+    downloadProjectBtn.style.display = 'none';
+    exportBtn.style.display = 'none';
   }
-  
-  // Рендер для десктопа
-  renderMain('mainList', false);
-  renderRightDesktop();
+  renderMain();
+  renderRight();
   renderCenter();
-  renderManagerReplyDesktop();
-  renderProposalsDesktop();
-  
-  // Рендер для мобильных
-  renderMain('mobileMainList', true);
-  renderRightMobile('mobileRight');
-  renderProposalsMobile('mobileProposalList');
-  renderManagerReplyMobile('mobileManagerReplyArea');
-  
+  renderManagerReply();
+  renderProposals();
   clearDragState();
   save();
 }
@@ -1951,6 +1494,7 @@ function showTripleFieldModal(title, f1, f2, f3, v1='', v2='', v3=''){
   });
 }
 
+
 function showQuadFieldModal(title, f1, f2, f3, f4, v1='', v2='', v3='', v4=''){
   return new Promise(resolve=>{
     const backdrop = document.getElementById('appModalBackdrop');
@@ -1986,6 +1530,7 @@ function showQuadFieldModal(title, f1, f2, f3, f4, v1='', v2='', v3='', v4=''){
   });
 }
 
+// Запускаем рендер после инициализации (если уже авторизованы)
 if (checkAuth()) {
     render();
 }
